@@ -3,9 +3,11 @@ import random
 rock = "Rock"
 paper = "Paper"
 scissors = "Scissors"
+game_counter = 0
 
 player_move = input("Choose [r]ock, [p]aper, [s]cissors or [e]xit: ")
 while player_move != "e":
+    game_counter += 1
 
     if player_move == "r":
         player_move = rock
@@ -38,3 +40,6 @@ while player_move != "e":
     else:
         print("You lose!")
     player_move = input("Choose [r]ock, [p]aper, [s]cissors or [e]xit: ")
+else:
+    print("Thank you for playing!")
+    raise SystemExit(f"Total games played: {game_counter}")
